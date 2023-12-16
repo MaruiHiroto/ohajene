@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sample.css">
+    <script src="index copy.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header class="daimei">
+            <h1>おはなしじぇねれーたー偽</h1>
+    </header>
+    <div class="all">
+        
+        <div class="idol_select">
+            <ul class="idolselect">
+                <li>
+                    <a href="javascript:void(0);" onclick="idol_select(0);">
+                        <img class="idol" src="face_765/face_haruka/haruka_normal.png" >
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" onclick="idol_select(1);">
+                        <img class="idol" src="face_765/face_chihaya/chihaya_normal.png" >
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" onclick="idol_select(2);">
+                        <img class="idol" src="face_765/face_miki/miki_normal.png" >
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" onclick="idol_select(3);">
+                        <img class="idol" src="face_765/face_yukiho/yukiho_normal.png" >
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" onclick="idol_select(4);">
+                        <img class="idol" src="face_765/face_yayoi/yayoi_normal.png" >
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" onclick="idol_select(5);">
+                        <img class="idol" src="face_765/face_makoto/makoto_normal.png" >
+                    </a>
+                </li>   
+                <li>
+                    <a href="javascript:void(0);" onclick="idol_select(6);">
+                        <img class="idol" src="face_765/face_iori/iori_normal.png" >
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" onclick="idol_select(7);">
+                        <img class="idol" src="face_765/face_takane/takane_normal.png" >
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" onclick="idol_select(8);">
+                        <img class="idol" src="face_765/face_ritsuko/ritsuko_normal.png" >
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" onclick="idol_select(9);">
+                        <img class="idol" src="face_765/face_azusa/azusa_normal.png" >
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" onclick="idol_select(10);">
+                        <img class="idol" src="face_765/face_mami/mami_normal.png" >
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" onclick="idol_select(11);">
+                        <img class="idol" src="face_765/face_ami/ami_normal.png" >
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" onclick="idol_select(12);">
+                        <img class="idol" src="face_765/face_hibiki/hibiki_normal.png" >
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="select">
+            <ul class="faceselect">
+                <li>
+                    <a href="javascript:void(0);" onclick="LinkClick(1);">
+                        <img class="face_select" src="face_765/face_chihaya/chihaya_normal.png" id="image_1">
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" onclick="LinkClick(2);">
+                        <img class="face_select" src="face_765/face_chihaya/chihaya_warai.png" id="image_2">
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" onclick="LinkClick(3);">
+                        <img class="face_select" src="face_765/face_chihaya/chihaya_kultu.png" id="image_3">
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" onclick="LinkClick(4);">
+                        <img class="face_select" src="face_765/face_chihaya/chihaya_hukigen.png" id="image_4">
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" onclick="LinkClick(5);">
+                        <img class="face_select" src="face_765/face_chihaya/chihaya_rage.png" id="image_5">
+                    </a>
+                </li>
+                <br/>
+            </ul>
+        </div>    
+        <button type="button" href="javascript:void(0)" onclick="tsuika();">↓追加</button>
+        <br/>
+        <form>
+            <div class="scenario">
+                <div class="relative">
+                    <img class="fae" id="face" src="face_765/face_chihaya/chihaya_normal.png" />
+                    <div class="fukidasi">
+                        <p class="idol_name" id="name">如月千早</p>
+                        <p id="preview" class="preview"></p>
+                    </div>
+                </div>
+            </div>
+            <p style="margin: 0 0 10px;">
+                <textarea rows="2" cols="60" id="serif" onkeyup="inputCheck()"></textarea>
+            </p>
+            <label><input type="checkbox" id="check" onclick="check()">編集モード</label>
+        </form>
+        <section class="hensyuu" style="display: none;">
+            <div class="scenario" id="scenario" style></div>
+        </section>
+        <section class="display" style>
+            <section>
+                <canvas class="kanseihin" id="kanseihin" width="640" height="900">
+
+                </canvas>
+            </section>
+        </section>
+    </div>
+</body>
+</html>
