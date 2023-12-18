@@ -88,6 +88,8 @@
     <img src="face_765/face_mami/mami_komari.png" width="4%">
     <img src="face_765/face_mami/mami_odoroki.png" width="4%">
     <img src="face_765/face_mami/mami_warai.png" width="4%">
+
+    <img src="face_765/face_P/P_normal.png" width="4%">
     <hr>
     <div class="optidol">
         <form action='result.php' method='POST'>
@@ -118,19 +120,19 @@
             </select>
             <p></p>
             <label for='serif' method='POST'>セリフ</label>
-            <input type='text' size="78" name='serif'>
+            <input type='text' size="78" name='serif' autocomplete="off">
             <button type='submit'>追加</button>
         </form>
-        <form action='delete.php' method='POST'>
+        <form action='delete.php' method='POST' >
             <label for='article'>削除する行</label>
-            <input type='txt' name='int'>
+            <input type='txt' name='int' autocomplete="off">
             <button type='submit'>削除</button> 
         </form>
         <form action='irekae.php' method='POST'>
             <label for='article'>入れ替える:前の行</label>
-            <input type='int' name='mae'>
+            <input type='int' name='mae' autocomplete="off">
             <label for='article'>後の行</label>
-            <input type='int' name='ato'>
+            <input type='int' name='ato' autocomplete="off">
             <button type='submit'>入れ替える</button>
         </form>
         <form action="allcreare.php" method="POST">
