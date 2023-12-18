@@ -1,0 +1,41 @@
+import cv2
+import numpy as np
+import matplotlib.pyplot as plt
+
+def pixel(im, k):
+    z = im.reshape(-1, 3).astype(np.float32)
+    criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 10, 1.0)
+    ret, lab, cter = cv2.kmeans(z, k, None, criteria, 10, cv2.KMEANS_RANDOM_CENTERS)
+    cter = np.uint8(cter)
+    return cter[lab.flatten()].reshape(im.shape)
+
+im = cv2.imread(r"")
+n = 0.23
+k = 6
+
+h, w, ch = im.shape
+
+im_small = cv2.resize(im, (int(w*n), int(h*n)))
+im_big = cv2.resize(im_small, (w, h), interpolation=cv2.INTER_NEAREST)
+
+dots = pixel(im_big, k)
+
+plt.imshow(cv2.cvtColor(dots, cv2.COLOR_BGR2RGB))
+plt.axis("off")
+plt.show()
+
+print("この画像を保存しますか。Y/N")
+bule = input()
+i = 0
+while bule != "Y" and bule != "N":
+    print("この画像を保存しますか。Y/N")
+    bule = input()
+    i += 1
+    if i >= 5:
+        print("YかNって言ってんだろマヌケ")
+
+if bule == "Y":
+    print("ファイル名を入力してください。")
+    print("ファイルはpng形式で保存されます")
+    title = input()
+    cv2.imwrite("C:/Users/toroh/Pictures/dot/" + title + ".png", dots)

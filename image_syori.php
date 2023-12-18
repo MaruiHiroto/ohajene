@@ -97,6 +97,11 @@
             "face_765/face_mami/mami_komari.png",
             "face_765/face_mami/mami_odoroki.png",
             "face_765/face_mami/mami_warai.png"];
+        $P = ["face_765/face_P/P_normal.png",
+            "face_765/face_P/P_normal.png",
+            "face_765/face_P/P_normal.png",
+            "face_765/face_P/P_normal.png",
+            "face_765/face_P/P_normal.png"];
 
         $hyoujou_count = 0;
         $hyoujou_list = file(__DIR__ . '/hyoujou.txt', FILE_IGNORE_NEW_LINES);
@@ -142,6 +147,9 @@
             }
             if ($idol == 'mami'){
                 $idollist_a[] = $mami[$hyoujou_list[$hyoujou_count]-1];
+            }
+            if ($idol == 'P'){
+                $idollist_a[] = $P[$hyoujou_list[$hyoujou_count]-1];
             }
             $hyoujou_count++;
         }
@@ -261,6 +269,9 @@
             }
             if ($idol_face == "yayoi"){
                 $idolname = "高槻やよい";
+            }
+            if ($idol_face == "P"){
+                $idolname = "P";
             }
             $fontfile = "C:\Windows\Fonts\meiryob.ttc";
             $color = imagecolorallocate($result_im, 243, 50, 129);
