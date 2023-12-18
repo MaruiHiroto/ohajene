@@ -1,0 +1,126 @@
+a:hover{background-color:#d6d6d6;}
+
+ul.idolselect li a { color:#0000FF; text-decoration:none; 
+    padding: 5px 8px;
+    display: block;
+    border-radius: 4px;
+}
+
+ul.idolselect li a img{
+    width: 72px;
+    vertical-align: middle;
+}
+
+ul.faceselect li a{
+    color:#0000FF; text-decoration:none; 
+    padding: 5px 8px;
+    display: block;
+    border-radius: 5px;
+}
+
+ul.faceselect li a img{
+    width: 76px;
+    vertical-align: middle;
+}
+
+ul{
+    display: flex;
+    padding-left: 0;
+}
+
+li {list-style: none;}
+
+.all{margin: 40px;}
+
+.scenario{
+    width: 320px;
+    background: black url(buck_ground/haikei.png) repeat-y;
+    background-size: 320px 5px;
+    margin: 1em 0;
+}
+
+.relative{
+    width: 320px;
+    height: 84px;
+    position: relative;
+}
+
+form{
+    display: block;
+    margin: 0em;
+}
+
+.fae{
+    width: 76px;
+    position: absolute;
+    left: 5px;
+}
+
+.fukidasi{
+    position: absolute;
+    right: 9px;
+    background: url(buck_ground/hukidashi.png) no-repeat;
+    background-size: 224px 76px;
+    width: 224px;
+    height: 76px;
+}
+
+p.idol_name{
+    position: absolute;
+    top: 4px;
+    left: 5px;
+    color: #f33281;
+    background-color: white;
+    padding: 0;
+    margin: 0;
+}
+
+textarea{
+    font: inherit;
+    color: inherit;
+    margin: 0;
+    overflow: auto;
+    width: 320px;
+}
+
+.idol_name{
+    font: bold 14px/17.5px "Arial", sans-serif;
+}
+
+.preview{
+    position: absolute;
+    top: 19px;
+    left: 5px;
+    white-space: pre-wrap;
+    max-height: 76px;
+    font: bold 14px/17.5px "Arial", sans-serif;
+    color: black;
+    padding: 0;
+    margin: 0;
+    word-break: break-all;
+}
+
+.relative .fae, .fukidasi{
+    position: absolute;
+    top: 4px;
+}
+
+header {background-color: #EEEEEE;
+        padding: 30px 15px;
+        margin: 0px 0px 30px;
+        color: #333333;
+}
+
+section {
+    display: block;
+}
+
+.display {
+    display: inline-block;
+    vertical-align: baseline;
+
+}
+
+canvas{
+    width: 320px;
+}
