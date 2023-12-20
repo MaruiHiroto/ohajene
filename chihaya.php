@@ -88,7 +88,7 @@
     <img src="face_765/face_mami/mami_komari.png" width="4%">
     <img src="face_765/face_mami/mami_odoroki.png" width="4%">
     <img src="face_765/face_mami/mami_warai.png" width="4%">
-
+    &nbsp;
     <img src="face_765/face_P/P_normal.png" width="4%">
     <hr>
     <div class="optidol">
@@ -109,6 +109,7 @@
             <option value="makoto">菊地真</option>
             <option value="yukiho">萩原雪歩</option>
             <option value="P">P</option>
+            <option value="kara">顔無し</option>
             </select>
             <label for='idol_hyoujou' method='POST'>番号</label>
             <select name="idol_hyoujou">
