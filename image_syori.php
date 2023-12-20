@@ -151,6 +151,9 @@
             if ($idol == 'P'){
                 $idollist_a[] = $P[$hyoujou_list[$hyoujou_count]-1];
             }
+            if ($idol == 'kara'){
+                $idollist_a[] = " ";
+            }
             $hyoujou_count++;
         }
         $count = count($idollist) * 17;
@@ -194,16 +197,18 @@
         }
         $h_sum = 10;
         foreach ($idollist_a as $face_path){
-            $face = imagecreatefrompng($face_path);
-            list($wi, $hei) = getimagesize($face_path);
-            imagecopy(
-                $result_im,
-                $face, 10,
-                $h_sum,
-                0,
-                0,
-                $wi,
-                $hei);
+            if ($face_path != " "){
+                $face = imagecreatefrompng($face_path);
+                list($wi, $hei) = getimagesize($face_path);
+                imagecopy(
+                    $result_im,
+                    $face, 10,
+                    $h_sum,
+                    0,
+                    0,
+                    $wi,
+                    $hei);
+            }
             $h_sum = $h_sum + $hei + 18;
         }
         $y = 72;
@@ -272,6 +277,9 @@
             }
             if ($idol_face == "P"){
                 $idolname = "P";
+            }
+            if ($idol_face == "kara"){
+                $idolname = " ";
             }
             $fontfile = "C:\Windows\Fonts\meiryob.ttc";
             $color = imagecolorallocate($result_im, 243, 50, 129);
