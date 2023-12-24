@@ -130,6 +130,11 @@
             <button type='submit'>削除</button> 
         </form>
         <form action='irekae.php' method='POST'>
+            <label for='article'>末尾の行を任意の行に挿入する:挿入したい行</label>
+            <input type='int' name='taisyou' autocomplete="off">
+            <button type='submit'>挿入</button>
+        </form>
+        <form action='irekae_2.php' method='POST'>
             <label for='article'>入れ替える:前の行</label>
             <input type='int' name='mae' autocomplete="off">
             <label for='article'>後の行</label>
